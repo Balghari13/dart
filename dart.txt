@@ -1,0 +1,441 @@
+void main()async{
+    print('hello');
+ await Future.delayed(const Duration(seconds:5));
+ print('Hello');
+}
+
+
+//
+
+void main(){
+   add(5,1).then((r){
+       print(r);
+   }).catchError((e){
+       print(e);
+   });
+}
+Future <double> add(int a, int b)async{
+     return a/b;
+}
+//
+
+void main(){
+
+  factorial(9,5);
+
+}
+
+ factorial(int num, int num2){
+  int f = 1;
+  int r = 1;
+  int rF=1;
+  for(int i= 1; i<=num; i++){
+    f *= i;
+  }
+  int num3 = num-num2;
+  for(int i=1; i<=num3; i++){
+    r *=i;
+  }
+  for(int i=1; i<=num2; i++){
+      rF *=i;
+  }
+ 
+  print('factorail of f is $f');
+  print('factorial of (n-r) is $r');
+  print('n!/(n-r)! = ${f/r}');
+  print('n!/r!(n-r)! = ${f/rF*r}');
+}
+
+//
+void main(){
+  print(nCr(9,4));
+   // print(fac(5));
+}
+
+int fac(int num){
+    int f=1;
+    for(int i=1; i<=num; i++){
+      f *=i;
+    } return f;
+    
+}
+double nCr(int n, int r){
+    // int k;
+    // k=n-r;
+    // double s=1;
+    // for(int j=1; j<=n; j++){
+    //     s *=j;
+    // }
+    return fac(n)/fac(n-r);
+  //return s/k;
+}
+
+//
+void main(){
+ print(factorial(5)); 
+ print(fac2(5));
+}
+factorial(int num){
+    int f = 1;
+    for(int i=1; i<=num; i++){
+        f *= i;
+    }
+    return f;
+}
+fac2(int num){
+    int f1=1;
+    int i=1;
+    while(i<=num){
+        f1 *=i;
+        i++;
+        
+    }
+    return f1;
+}
+//
+
+void main()async{
+  int t =100;
+  int min =0;
+  int sec=0;
+  for(int i=1; i<=t; i++){
+      await Future.delayed(const Duration(seconds:1));
+      if(i%60==0){
+          min++;
+          sec=0;
+      }else{
+          sec++;
+      }
+      print('${ min.toString().padLeft(2,'0')}:${sec.toString().padLeft(2,'0')}');
+  }
+ 
+}
+
+//
+void main()async{
+  print('hello');
+  int t = 100;
+  int min =0;
+  int sec =0;
+
+  for(int i=1;i<=t;i++){
+    await Future.delayed(const Duration(seconds:1));
+
+    if(i%60==0){
+      min++;
+      sec=0;
+
+    }else{
+      sec++;
+    }
+print('${min.toString().padLeft(2,'0')} : ${sec.toString().padLeft(2,'0')}');
+  }
+
+}
+//
+
+void main()async{
+ int num =0;
+ try{
+     for(int i=0; i<=30;i++){
+     await Future.delayed(Duration(seconds:10));
+     print(num++);
+ }
+     
+ }
+ catch(e){
+     print(e);
+ 
+ }
+ 
+}
+
+//
+void main(){
+  //print("Hello, World!");
+   int a=10;
+   int b=0;
+   int res;
+   try{
+       res=a~/b;
+       print(res);
+   }catch(e){
+       print(e);
+   }
+   
+}
+//
+import 'dart:io'; 
+void main(){
+//   List<String> str = ['01/03/23','02/03/23','03/03/23','04/03/23'];
+//   List<String> days = [];
+//   List<String> months =[];
+//   List<String> years = [];
+   
+//   for(int i=0; i<str.length; i++){
+//       var output = str[i].split('/');
+//       days.add(output[0]);
+//       months.add(output[1]);
+//       years.add(output[2]);
+//   }
+//   print('$days, $months, $years');
+//
+// String name = (stdin.readLineSync()!); 
+//     print('$name'); 
+// int a = int.parse(stdin.readLineSync()!);
+// int b = int.parse(stdin.readLineSync()!);
+
+// while(a<=b){
+//     print (a);
+//     a++;
+// }
+int a = int.parse(stdin.readLineSync()!);
+int b = int.parse(stdin.readLineSync()!);
+while(a<b){
+    print(a);
+    a++;
+}
+
+}
+//
+void main(){
+   print("Hello, World!");
+   String s = 'aBcDEfghIJKlm';
+   int upperCase = 0;
+   int lowerCase = 0;
+   
+   for(int i=0; i<s.length; i++){
+       if(s[i].contains(RegExp(r'^[A-Z]'))){
+           upperCase++;
+       }else{
+           lowerCase++;
+       }
+   }
+   print("String s contains $upperCase capital letters");
+   print("String s contains $lowerCase small letters");
+}
+//
+void main(){
+   print("Hello, World!");
+   List <int> num = [10,20,25,23,28,31,33];
+   List <int> even=[];
+   List <int> odd=[];
+   
+   for(int i=0; i<num.length; i++){
+       if(num[i]%2==0){
+           even.add(num[i]);
+       }else{
+           odd.add(num[i]);
+       }
+   }
+   print(even);
+   print(odd);
+   
+  // String s = "Najumuddin balghari";
+//   List <int> num2 = [5,6,1,2,3];
+//   int max1 = num2[0];
+//   int min1 = num2[0];
+//   for(int i=0; i<num2.length; i++){
+//       if(num2[i]>max1){
+//           max1=num2[i];
+//   }if(num2[i]<min1){
+//       min1 = num2[i];
+//   }
+//   }
+//   print(max1);
+//   print(min1);
+List<int> list = [5,6,2];
+List<int> list2 =[2,3,4];
+List<int> list3 =[];
+int max1 = list[0];
+int min1 = list[0];
+for(int i=0; i<list.length; i++){
+    if(list[i]>max1){
+        max1=list[i];
+    }else{
+        min1=list[i];
+    }
+}
+   print(max1);
+   print(min1);
+for(int i=0; i<list.length; i++){
+    list3.add(list[i]*list2[i]);
+}
+   print(list3);
+   
+   String s = 'Najmuddin Balghri';
+   List<String> str = s.split(' ');
+   String firstName = str[0];
+   String lastName = str[1];
+   print('My first name is $firstName');
+   print('My last name is $lastName');
+   
+   String date = '8/03/2023';
+   List<String> st = date.split('/');
+   String d =st[0];
+   String m = st[1];
+   String y = st[2];
+   print('Today date is $d and month is $m and year is $y');
+   
+   
+}
+//
+void main() {
+    print("Hello, World!");
+
+    // List <int> list = [0,1,2,3,4,5,6,7,8,9,10];
+    // List <int> elist =[];
+    // List <int> olist=[];
+    
+    // for(int i=0; i<list.length; i++){
+    //     if(list[i]%2==0){
+    //         elist.add(list[i]);
+    //     }else{
+    //         olist.add(list[i]);
+    //     }
+    // }
+    // print(elist);
+    // print(olist);
+//   List <String> list =['Butterfly', 'freestyle','Backstroke', 'Breaststroke', 'medley'];
+//   List<String> upperCase=[];
+//   List<String> lowerCase=[];
+ 
+//   for(int i=0; i<list.length; i++){
+//       String nam = list[i];
+      
+//      int len = list[i].length;
+//       print('$nam has length of $len');
+//              }
+//     for(int i=0; i<list.length; i++){
+//               if(list[i][0]==list[i][0].toUpperCase()){
+//             upperCase.add(list[i]);
+            
+//         }else{
+//             lowerCase.add(list[i]);
+//         }
+    
+//     }
+//     print('The upper case strings are $upperCase');
+//     print('The lower case strings are $lowerCase');
+     List <String> list = ['A','B','c','d','E'];
+     List <String> uCase= [];
+     List <String> lCase= [];
+    for(int i=0; i<list.length; i++){
+        //print(list[i].substring(0,1));
+        if(list[i].substring(0,1).contains(RegExp(r'^[A-Z]')))
+        {
+           uCase.add(list[i]);
+        }else{
+            lCase.add(list[i]);
+        }
+    }  
+    print(uCase);
+    print(lCase);
+    
+    String s = 'AbCDefGhiJK';
+    int upperCase =0;
+    int lowerCase = 0;
+    for(int i=0; i<s.length;i++){
+        if(s[i].contains(RegExp(r'^[A-Z]'))){
+            upperCase++;
+        }else{
+            lowerCase++;
+        }
+     
+    }
+     print(upperCase);
+        print(lowerCase);
+    //print(len.length);
+    
+
+// }
+// var grade = "A"; 
+//   switch(grade) { 
+//       case "A": {  print("Excellent"); } 
+//       break; 
+     
+//       case "B": {  print("Good"); } 
+//       break; 
+     
+//       case "C": {  print("Fair"); } 
+//       break; 
+     
+//       case "D": {  print("Poor"); } 
+//       break; 
+     
+//       default: { print("Invalid choice"); } 
+//       break; 
+//   } 
+ }
+
+//
+void main(){
+   print("Hello, World!");
+//   List<int> list =  [0,1,2,3,4,5,6,7,8,9,10];
+//   List<int> elist =[];
+//   List<int> olist=[];
+
+// for(int i=0; i<list.length; i++){
+//     if(list[i]%2==0){
+//         elist.add(list[i]);
+//         //print(elist);
+//     }else{
+//         olist.add(list[i]);
+//         //print(olist);
+//     }
+
+    
+}
+ print('Final values of elist are $elist');
+ print('Final values of olist are $olist');
+}
+
+//
+void main(){
+ // TestB obj = TestB();
+  TestC obj = TestC();
+  obj.res();
+  //obj.res();
+}
+abstract class TestA{
+    void res();
+    
+}
+class TestB extends TestA{
+  @override void res(){
+        print('Hello');
+    }
+}
+class TestC extends TestA{
+    @override void res(){
+        print('My name is najmuddin balghari');
+    }
+}
+
+//
+void main(){
+   car obj=car();
+   print(obj.engineNo);
+   obj.display();
+   
+   car1 c = car1('E1101',2);
+}
+class car{
+    String engineNo = 'v6';
+    void display(){
+        print('23');
+    }
+}
+class car1{
+    car1(String engine, int a){
+        print('$engine , $a');
+    }
+}
+
+
+
+
+
+
+
+
